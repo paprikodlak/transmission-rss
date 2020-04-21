@@ -27,31 +27,32 @@ os does not support Ruby >= 2.1, e.g. on Debian wheezy.)
 a link to a suitable README for your version
 [on the releases page](https://github.com/nning/transmission-rss/releases).
 
-Installation
+Installation in Turris Omnia Ubuntu lxc container
 ------------
-
-### Latest stable version from rubygems.org
-
 ```sh
-gem install transmission-rss
-```
-
-### From source
-
-```sh
-git clone https://github.com/nning/transmission-rss
+lxc-attach --name transfeed_lxc
+sudo apt install nano
+sudo apt install git
+git clone https://github.com/paprikodlak/transmission-rss
 cd transmission-rss
+sudo apt-get install rubygems ruby-dev
 bundle
 gem build transmission-rss.gemspec
 gem install transmission-rss-*.gem
+nano /etc/transmission-rss.conf
+crontab -e
 ```
 
-### Via Docker
 
+## Cron job
+Add to first line:
 ```sh
-docker run -t \
-  -v $(pwd)/transmission-rss.conf:/etc/transmission-rss.conf \
-  nning2/transmission-rss:v1.0.0
+MAILTO=""
+```
+
+Append at the end to run every 10 minutes:
+```sh
+*/10 * * * * /root/transmission-rss -s >> /root/transmission-rss/log/cronLog 2>&1
 ```
 
 Configuration
