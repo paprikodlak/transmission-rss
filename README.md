@@ -43,8 +43,22 @@ nano /etc/transmission-rss.conf
 crontab -e
 ```
 
+#### Config
+```sh
+ 
+feeds:
+  - url: https://showrss.info/user/xxx.rss?magnets=true&namespaces=true&name=clean&quality=fhd&re=yes
+    seed_ratio_limit: 0.001
 
-## Cron job
+add_paused: false
+
+server:
+  host: 10.0.0.7
+  port: 9091
+
+```
+
+#### Cron job
 Add to first line:
 ```sh
 MAILTO=""
