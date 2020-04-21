@@ -1,4 +1,4 @@
-transmission-rss
+transmission-rss on Turris Omnia in a Ubuntu Bionic lxc-container
 ================
 
 [![Gem Version](https://img.shields.io/gem/v/transmission-rss.svg)](http://badge.fury.io/rb/transmission-rss)
@@ -7,27 +7,27 @@ transmission-rss
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/nning/transmission-rss.svg)](https://codeclimate.com/github/nning/transmission-rss)
 [![Docker Hub Build Status](https://img.shields.io/docker/build/nning2/transmission-rss.svg)](https://hub.docker.com/r/nning2/transmission-rss/)
 
-transmission-rss is basically a workaround for transmission's lack of the
-ability to monitor RSS feeds and automatically add enclosed torrent links.
+After failing with other programs, I was able to deploy this one and it was even quite pleasant.
 
-It works with transmission-daemon and transmission-gtk (if the web frontend
+>transmission-rss is basically a workaround for transmission's lack of the
+>ability to monitor RSS feeds and automatically add enclosed torrent links.
+>
+>It works with transmission-daemon and transmission-gtk (if the web frontend
 is enabled in the settings dialog). Sites like showrss.karmorra.info and
 ezrss.it or self-hosted seriesly instances are suited well as feed sources.
-
-A tool called transmission-add-file is also included for mass adding of
+>
+>A tool called transmission-add-file is also included for mass adding of
 torrent files.
-
-As it's done with poems, I devote this very artful and romantic piece of
+>
+>As it's done with poems, I devote this very artful and romantic piece of
 code to the single most delightful human being: Ann.
-
-The minimum supported Ruby version is 2.1. (You will need `rbenv` if your
+>
+>The minimum supported Ruby version is 2.1. (You will need `rbenv` if your
 os does not support Ruby >= 2.1, e.g. on Debian wheezy.)
 
-**Note, that this README is for the current development branch!** You can find
-a link to a suitable README for your version
-[on the releases page](https://github.com/nning/transmission-rss/releases).
 
-Installation in Turris Omnia Ubuntu lxc container
+
+Installation 
 ------------
 ```sh
 lxc-attach --name transfeed_lxc
