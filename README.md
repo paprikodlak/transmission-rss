@@ -52,7 +52,7 @@ MAILTO=""
 
 Append at the end to run every 10 minutes:
 ```sh
-*/10 * * * * /root/transmission-rss -s >> /root/transmission-rss/log/cronLog 2>&1
+*/10 * * * * /usr/local/bin/transmission-rss -s >> /root/transmission-rss/log/cronLog 2>&1
 ```
 
 Configuration
