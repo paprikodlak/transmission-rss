@@ -30,6 +30,7 @@ os does not support Ruby >= 2.1, e.g. on Debian wheezy.)
 Installation 
 ------------
 ```sh
+lxc-start --name transfeed_lxc
 lxc-attach --name transfeed_lxc
 sudo apt install nano
 sudo apt install git
@@ -48,7 +49,7 @@ crontab -e
  
 feeds:
   - url: https://showrss.info/user/xxx.rss?magnets=true&namespaces=true&name=clean&quality=fhd&re=yes
-    seed_ratio_limit: 0.001
+    seed_ratio_limit: 0
 
 add_paused: false
 
